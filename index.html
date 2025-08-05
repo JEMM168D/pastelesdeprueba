@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasteles de Prueba - Delicias para tus Sentidos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #f8c471;
+            --secondary-color: #ffe8d6;
+            --text-color: #4b3832;
+            --accent-color: #e5989b;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        main {
+            padding-top: 5rem; /* Ajuste para el header fijo */
+        }
+
+        section {
+            padding: 4rem 2rem;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 6rem 2rem;
+        }
+
+        .hero h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pastel {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .pastel:hover {
+            transform: translateY(-10px);
+        }
+
+        .pastel img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .pastel h3 {
+            padding: 1rem;
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .contacto form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 2rem auto;
+            text-align: left;
+            gap: 1rem;
+        }
+
+        .contacto label {
+            font-weight: bold;
+        }
+
+        .contacto input, .contacto textarea {
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .contacto button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .contacto button:hover {
+            background-color: #d1a45c;
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Pasteles de Prueba</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <h1>Bienvenido a Pasteles de Prueba</h1>
+            <p>Donde la creatividad se mezcla con el sabor. Descubre nuestros pasteles únicos para cada ocasión especial.</p>
+        </section>
+
+        <section id="galeria" class="galeria">
+            <h2>Nuestra Galería de Delicias</h2>
+            <div class="galeria-grid">
+                <div class="pastel">
+                    <img src="https://via.placeholder.com/300x200?text=Pastel+de+Chocolate" alt="Pastel de Chocolate">
+                    <h3>Pastel de Chocolate</h3>
+                </div>
+                <div class="pastel">
+                    <img src="https://via.placeholder.com/300x200?text=Pastel+de+Vainilla" alt="Pastel de Vainilla">
+                    <h3>Pastel de Vainilla</h3>
+                </div>
+                <div class="pastel">
+                    <img src="https://via.placeholder.com/300x200?text=Pastel+de+Fresa" alt="Pastel de Fresa">
+                    <h3>Pastel de Fresa</h3>
+                </div>
+                <div class="pastel">
+                    <img src="https://via.placeholder.com/300x200?text=Pastel+de+Bodas" alt="Pastel de Bodas">
+                    <h3>Pastel de Bodas</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <h2>Haz tu Pedido Personalizado</h2>
+            <form id="contact-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Tu Mensaje y Pedido:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar Pedido</button>
+            </form>
+            <p id="form-message" class="message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pasteles de Prueba. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactForm = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault(); // Previene el envío por defecto del formulario
+
+                // Simula el envío de datos
+                console.log('Formulario enviado:', {
+                    nombre: document.getElementById('nombre').value,
+                    email: document.getElementById('email').value,
+                    mensaje: document.getElementById('mensaje').value
+                });
+
+                // Muestra un mensaje de éxito
+                formMessage.textContent = '¡Gracias por tu pedido! Nos pondremos en contacto contigo pronto.';
+                formMessage.style.color = 'green';
+                formMessage.style.display = 'block';
+
+                // Limpia el formulario después de un breve tiempo
+                setTimeout(() => {
+                    contactForm.reset();
+                    formMessage.style.display = 'none';
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>
